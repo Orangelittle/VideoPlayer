@@ -242,7 +242,8 @@ public class VideoController extends FrameLayout implements View.OnClickListener
 
     public void setVideoPlayer(VideoPlayer mVideoPlayer){
         this.mVideoPlayer = mVideoPlayer;
-        mImage.setImageBitmap(mVideoPlayer.getFirstFrame()); //设置视频第一帧画面
+        // TODO: 2018/5/14 对外抛接口 获取第一帧图片 此方耗时 
+//        mImage.setImageBitmap(mVideoPlayer.getFirstFrame()); //设置视频第一帧画面 
     }
 
 

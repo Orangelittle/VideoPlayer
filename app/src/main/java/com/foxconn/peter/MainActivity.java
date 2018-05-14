@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     
 //        videoPlayer.setVideoUrl("http://file.xiaole-sharp.com:8314/group1/M00/00/05/Cr_IdVrz98eAPm2rAORyoGC-Mq4567.mp4");
-        videoPlayer.setVideoUrl("http://tanzi27niu.cdsb.mobi/wps/wp-content/uploads/2017/05/2017-05-17_17-33-30.mp4");
+        videoPlayer.setVideoUrl("http://orewrc0vz.bkt.clouddn.com/testMovie.mp4");
         videoPlayer.setVideoController(controller);
 
 
