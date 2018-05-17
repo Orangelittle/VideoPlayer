@@ -2,6 +2,7 @@ package com.foxconn.peter;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Toast;
 
@@ -42,5 +43,31 @@ public class MainActivity extends AppCompatActivity {
         if (videoPlayer != null) {
             videoPlayer.release();
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (onBackPressd()) {
+            return;
+        }
+        super.onBackPressed();
+    }
+
+    /**
+     * 监听返回键
+     * @return
+     */
+    public boolean onBackPressd() {
+        if (videoPlayer != null) {
+            if (videoPlayer.isFullScreen()) {
+                return videoPlayer.exitFullScreen();
+            } else if (videoPlayer.isTinyWindow()) {
+                return videoPlayer.exitTinyWindow();
+            } else {
+                videoPlayer.release();
+                return false;
+            }
+        }
+        return false;
     }
 }

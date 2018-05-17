@@ -325,6 +325,11 @@ public class VideoPlayer extends FrameLayout implements TextureView.SurfaceTextu
         LayoutParams params = new LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.MATCH_PARENT);
+
+        if (mCurrentMode == MODE_TINY_WINDOW) { //小窗模式切换到全屏
+            contentView.removeView(mContainer);
+        }
+
         contentView.addView(mContainer, params);
 
         mCurrentMode = MODE_FULL_SCREEN;

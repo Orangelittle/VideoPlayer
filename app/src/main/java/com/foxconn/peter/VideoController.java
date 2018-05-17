@@ -215,7 +215,7 @@ public class VideoController extends FrameLayout implements View.OnClickListener
                 break;
 
             case R.id.full_screen:
-                if (mVideoPlayer.isNormal()) {
+                if (mVideoPlayer.isNormal() || mVideoPlayer.isTinyWindow()) {
                     mVideoPlayer.enterFullScreen();
                 } else if (mVideoPlayer.isFullScreen()) {
                     mVideoPlayer.exitFullScreen();
